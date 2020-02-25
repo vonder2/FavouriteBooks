@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" class="mat-elevation-z10">
+  <span class="nav-title">Books catalog</span>
+
+  <nav mat-tab-nav-bar backgroundColor="primary">
+    <a mat-tab-link routerLink="/books" [active]="router.url === '/books'" >
+      Books</a>
+    <a mat-tab-link routerLink="/fav"   [active]="router.url === '/fav'" >
+      Favourites</a>
+  </nav>
+  <span style="flex: 1 1 auto"></span>
+  <button mat-button disabled>  Logout  </button>
+</mat-toolbar>

@@ -1,0 +1,9 @@
+mat-toolbar
+{
+  height: 48px;
+}
+.nav-title
+{
+  /*margin-top: -3px;*/
+  padding-right: 40px;
+}
