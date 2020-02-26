@@ -35,6 +35,10 @@ mat-form-field
   padding-left: 25px;
 }
 
+/*.checkbox-column*/
+/*{*/
+/*  width: 40px;*/
+/*}*/
 
 /*!* Column Widths *!*/
 /*.mat-column-number,*/
@@ -42,9 +46,10 @@ mat-form-field
 /*  max-width: 64px;*/
 /*}*/
 
-/*.mat-column-created {*/
-/*  max-width: 124px;*/
-/*}*/
+.mat-column-select {
+  max-width: 50px;
+  width: 40px;
+}
 
 
 .mat-icon-button

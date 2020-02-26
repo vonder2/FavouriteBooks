@@ -1,7 +1,7 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {BooksService} from '../../Service/books.service';
 import {Book} from '../../Interfaces/book';
-import {MatPaginator, PageEvent} from '@angular/material/paginator';
+import {MatPaginator} from '@angular/material/paginator';
 import {SelectionModel} from '@angular/cdk/collections';
 
 @Component({
@@ -22,8 +22,6 @@ export class BooksComponent implements AfterViewInit {
   filter: string;
   selection: SelectionModel<string>;
 
-  // pageEvent: PageEvent;
-
   constructor(private bookService: BooksService) {
     bookService.dataSubj.subscribe(data => {
       this.data = data;
@@ -34,14 +32,14 @@ export class BooksComponent implements AfterViewInit {
       this.selection = new SelectionModel<string>(true, favourites));
 
     this.filter = bookService.filterText;
+
   }
 
   ngAfterViewInit() {
     this.paginator.page.subscribe(() => this.applyPaginator());
+
     this.selection.changed.subscribe(selected =>
       console.log('added:', selected.added, 'removed:', selected.removed, 'overral', this.selection.selected));
-
-    // TODO save paginator state, get resultsLength from http
   }
 
   applyFilter() {
@@ -52,6 +50,7 @@ export class BooksComponent implements AfterViewInit {
   }
 
   applyPaginator() {
+    // this.bookService.paginatorState = [this.paginator.pageIndex, this.paginator.pageSize];
     const startIndex = this.paginator.pageSize * this.paginator.pageIndex;
     this.isLoadingResults = true;
     // this.bookService.filterText = this.filter;

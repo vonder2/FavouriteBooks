@@ -1,0 +1,12 @@
+table
+{
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+
+
+}
+.mat-column-remove {
+  max-width: 50px;
+  width: 40px;
+}

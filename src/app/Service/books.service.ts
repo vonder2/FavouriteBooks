@@ -10,18 +10,19 @@ import {BehaviorSubject} from 'rxjs';
 export class BooksService {
 
   private apiURL = 'https://www.googleapis.com/books/v1/volumes?q=';
-  private filterValue: string;
+  private filterState: string;
+  private vaginatorState: string;
   dataSubj = new BehaviorSubject<Book[]>(null);
   favouriteSubj = new BehaviorSubject<string[]>(null);
 
   constructor(private http: HttpClient) {  }
 
   get filterText(): string {
-    return this.filterValue;
+    return this.filterState;
   }
 
   set filterText(value: string) {
-    this.filterValue = value;
+    this.filterState = value;
   }
 
   getData(name: string, startIndex = 0, maxResults = 20) {
