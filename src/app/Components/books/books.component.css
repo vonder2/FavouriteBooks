@@ -1,0 +1,55 @@
+.shadow-container {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.table-container {
+  position: relative;
+  overflow: auto;
+  max-height: 80vh;
+  max-height: -webkit-fill-available;
+}
+
+table {
+  width: 100%;
+
+}
+
+.loading-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 56px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-form-field
+{
+  padding-top: 20px;
+  padding-left: 25px;
+}
+
+
+/*!* Column Widths *!*/
+/*.mat-column-number,*/
+/*.mat-column-state {*/
+/*  max-width: 64px;*/
+/*}*/
+
+/*.mat-column-created {*/
+/*  max-width: 124px;*/
+/*}*/
+
+
+.mat-icon-button
+{
+  color: rgba(0,0,0,.26);
+}
+
+/*.mat-accent*/

@@ -8,9 +8,6 @@ import {Router} from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  links = ['First', 'Second'];
-  activeLink = this.links[0];
-
   constructor(public router: Router) { }
 
   ngOnInit(): void {
