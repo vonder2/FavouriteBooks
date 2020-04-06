@@ -6,10 +6,7 @@
   <mat-form-field>
     <mat-label>Search</mat-label>
     <input matInput type="search" (keyup.enter)="applyFilter()" placeholder="Book name" [(ngModel)]="filter">
-
   </mat-form-field>
-
-
 
   <div class="table-container">
     <table mat-table [dataSource]="data" class="example-table">
