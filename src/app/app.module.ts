@@ -18,13 +18,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
+import { GetData10Component } from './get-data10/get-data10.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BooksComponent,
     FavouritesComponent,
-    NavbarComponent
+    NavbarComponent,
+    GetData10Component
   ],
   imports: [
     BrowserModule,
